@@ -1,9 +1,35 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 
----
+const foregroundColor = "hsl(20, 50%, 50%)";
+const backgroundColor = "hsl(200, 50%, 50%)";
+
+const isRed = true;
+
+---	
 
 <MainLayout title = "My Blog">
-	<!-- <Welcome /> -->
-	<h1>Home</h1>
+	<p>hi from <span>Home</span></p>
+	<!-- <p class:list={["big", {red: isRed}]}>hi from <span>Home</span></p> -->
 </MainLayout>
+<!-- 
+
+<style>
+	.big {
+		font-size: 3.5rem;
+	}
+	.red {
+		color: red;
+	}
+</style>
+ -->
+
+<!-- 
+<style define:vars={{ foregroundColor, backgroundColor }}>
+	p {
+		background-color: var(--backgroundColor);
+		color: var(--foregroundColor);
+
+		font-size: 3.5rem;
+	}
+</style> -->
