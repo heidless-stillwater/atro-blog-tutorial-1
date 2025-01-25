@@ -1,0 +1,33 @@
+---
+import MainHead from '../layouts/MainHead.astro';
+
+// component imports
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "My Astro Blog", 
+	description = "My musings on Astro" 
+} = Astro.props as Props;
+
+---
+
+<!doctype html>
+<html lang="en">
+	<MainHead {title} {description} />
+	<body>
+		<slot />
+	</body>
+
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
