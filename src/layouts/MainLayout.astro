@@ -1,5 +1,7 @@
 ---
 import MainHead from '../layouts/MainHead.astro';
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
 
 // component imports
 interface Props {
@@ -21,8 +23,10 @@ import '../styles/global.css';
 <html lang="en">
 	<MainHead {title} {description} />
 	<body>
+		<Nav />
 		<slot />
 	</body>
+	<Footer />
 
 </html>
 
